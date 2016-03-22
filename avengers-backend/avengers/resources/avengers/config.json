@@ -1,0 +1,53 @@
+{
+	"type": "Collection",
+	"properties": {
+		"name": {
+			"name": "name",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "name",
+			"order": 0
+		},
+		"nickname": {
+			"name": "nickname",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "nickname",
+			"order": 1
+		},
+		"description": {
+			"name": "description",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "description",
+			"order": 2
+		},
+		"superpowers": {
+			"name": "superpowers",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "superpowers",
+			"order": 3
+		},
+		"url": {
+			"name": "url",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "url",
+			"order": 4
+		},
+		"age": {
+			"name": "age",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "age",
+			"order": 5
+		}
+	}
+}

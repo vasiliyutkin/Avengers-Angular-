@@ -1,0 +1,15 @@
+<navigation></navigation>
+<br>
+<div class="container">
+    <div class="jumbotron start">
+        <h2 class="text-center">Welcome to <span class='label label-info'>Avengers Universe</span></h2>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat='item in imgSource'>
+                <a ui-sref='squad' class="thumbnail">
+                    <img class='img-responsive' ng-src="{{item.url}}" alt="avengers">
+                </a>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,39 @@
+<navigation></navigation>
+<br>
+<div class="container" ng-if='team.length == 0'>
+    <div class="btn-group">
+        <a class="btn btn-info btn-sm" ui-sref='squad'>TO SQUAD</a>
+        <a class="btn btn-success btn-sm" ui-sref='add'>ADD NEW HERO</a>
+    </div>
+    <div class="jumbotron">
+        <h1>Nothing here yet! Please add somebody to your <span class='label label-default'>Team</span></h1>
+    </div>
+</div>
+<div class="panel panel-default" ng-if='team.length !== 0'>
+    <div class="panel-heading">Team</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-6 col-md-4" ng-repeat="hero in team">
+                <div class="thumbnail thumbnail-team">
+                    <img ng-src="{{hero.url}}" alt="{{$index+1}}">
+                    <div class="caption">
+                        <p style="text-align: center; color: #2a1d32; font-weight: 500;"><span class='label label-info'>{{hero.name}}</span> - <span class='label label-success'>{{hero.age}}</span></p>
+                        <h3 style="text-align: center; color: #2a1d32; font-weight: 500;">
+                            <span class='label label-default'>{{hero.nickname}}</span> 
+                            <a class="btn btn-danger btn-sm" role="button" ng-click="deleteFromTeam($index)">Delete</a>
+                        </h3>
+                        <p style="text-align: center; color: #2a1d32; font-weight: 500;">{{hero.superpowers}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-sm-offset-5 col-sm-2">
+                <a class="btn btn-info btn-lg" role="button" ng-click="resetTeam()">Disband</a>
+            </div>
+        </div>
+    </div>
+</div>

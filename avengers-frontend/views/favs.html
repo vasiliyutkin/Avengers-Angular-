@@ -1,0 +1,39 @@
+<navigation></navigation>
+<br>
+<div class="container" ng-if='favs.length == 0'>
+    <div class="btn-group">
+        <a class="btn btn-info btn-sm" ui-sref='squad'>TO SQUAD</a>
+    </div>
+    <div class="jumbotron">
+        <h1>Nothing here yet! Please add somebody to your <span class='label label-default'>Favourite Heroes</span></h1>
+    </div>
+</div>
+<div class="panel panel-default" ng-if='favs.length !== 0'>
+    <div class="panel-heading">Favourite Heroes of Marvel Galaxy</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-6 col-md-6" ng-repeat="hero in favs">
+                <div class="thumbnail thumbnail-favs">
+                    <img ng-src="{{hero.url}}" alt="{{$index+1}}">
+                    <div class="caption">
+                        <h3 style="text-align: center; color: #c55;">
+                        Nick 
+                        <span class='label label-info'>{{hero.nickname}}</span>
+                                <a class="btn btn-danger" role="button" ng-click="deleteFromFavs($index)">Delete</a>
+                        </h3>
+                        <h4 style="text-align: center; color: #c55;">Name <span class='label label-info'>{{hero.name}}</span> - <span class='label label-info'>{{hero.age}}</span></h4>
+                        <p style="text-align: center; color: #c55;">{{hero.superpowers}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-sm-offset-5 col-sm-2">
+                <a class="btn btn-primary btn-lg" role="button" ng-click="resetFavs()">Clear Favs</a>
+            </div>
+        </div>
+    </div>
+</div>

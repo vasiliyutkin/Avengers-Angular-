@@ -1,0 +1,41 @@
+<navigation></navigation>
+<br>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">Add new <span class='label label-info'>HERO</span> to your team</div>
+        <div class="panel-body">
+            <form ng-submit="addItem(hero)" name='heroForm' novalidate>
+                <div class="form-group">
+                    <label for="name">Hero name:</label>
+                    <input required name='name' type="text" class="form-control" id="name" ng-model='hero.name'>
+                    <span class='error' ng-show='heroForm.name.$error.required'>Please enter a name</span>
+                </div>
+                <div class="form-group">
+                    <label for="age">Hero age:</label>
+                    <input required name='age' type="number" class="form-control" id="age" ng-model='hero.age'>
+                    <span class='error' ng-show='heroForm.age.$error.required'>Please enter an age</span>
+                </div>
+                <div class="form-group">
+                    <label for="nickname">Hero nickname:</label>
+                    <input required name='nickname' type="text" class="form-control" id="nickname" ng-model='hero.nickname'>
+                    <span class='error' ng-show='heroForm.nickname.$error.required'>Please enter a nick</span>
+                </div>
+                <div class="form-group">
+                    <label for="status">Hero superpowers:</label>
+                    <input required name='superpowers' type="text" class="form-control" id="status" ng-model='hero.superpowers'>
+                    <span class='error' ng-show='heroForm.superpowers.$error.required'>Please enter superPwrs</span>
+                </div>
+                <div class="form-group">
+                    <label for="about">Hero description:</label>
+                    <textarea min='10' class="form-control" id="about" ng-model='hero.description' rows='7'></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="img">Hero img:</label>
+                    <input required name='image' type="text" class="form-control" id="img" ng-model='hero.url' placeholder='http://blablabla'>
+                    <span class='error' ng-show='heroForm.image.$error.required'>Please chose a picture</span>
+                </div>
+                <input class='btn btn-success btn-lg' type="submit" value='ADD HERO' ng-disabled="heroForm.$invalid">
+            </form>
+        </div>
+    </div>
+</div>

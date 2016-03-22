@@ -1,0 +1,45 @@
+<navigation></navigation>
+<br>
+<div class="container">
+    <div class="jumbotron">
+        <h3>Find your Hero right here!</h3>
+        <input type="text" name="heroFinder" placeholder="find by name..." style="text-transform: lowercase; width: 300px; background-color: #fff !important; color: #333; margin: 10px; padding: 8px;" ng-model='heroSearcher.name'>
+        <input type="text" name="heroFinder" placeholder="find by nickname..." style="text-transform: lowercase; width: 300px; background-color: #fff !important; color: #333; margin: 10px; padding: 8px;" ng-model='heroSearcher.nickname'>
+    </div>
+    <div class="jumbotron row" ng-repeat="hero in avengers | filter:heroSearcher track by $index">
+        <div class="row">
+            <h2 style="font-weight: bold; color: #101; margin: 10px; padding: 5px" class="text-center">{{ hero.name }}</h2>
+        </div>
+        <br>
+        <div class="row">
+            <div class="btn-group">
+                <input type="button" value="Add to your Squad" ng-click="addToSquad($index)" class="btn btn-sm btn-info" />
+                <input type="button" value="Add to Favorites" ng-click="addToFavorites($index)" class="btn btn-sm btn-success" />
+            </div>
+        </div>
+        <br>
+        <ul class="list-group col-sm-7 col-xs-12" style="list-style: none; display: flex; flex-direction: column; color: #333; font-weight: bold; margin: 0 auto;">
+            <li class="list-group-item">
+                Age:
+                <span class="label label-warning">{{hero.age}}</span>
+            </li>
+            <li class="list-group-item">
+                Nickname:
+                <span class="label label-success">{{hero.nickname}}</span>
+            </li>
+            <li class="list-group-item">
+                Superpowers:
+                <p style="font-size: 14px; font-weight: 600; color: #333;">{{hero.superpowers}}</p>
+            </li>
+            <li class="list-group-item">
+                About Avenger:
+                <p style="font-size: 14px; font-weight: 800; color: lightcoral;">{{hero.description}}</p>
+            </li>
+        </ul>
+        <div class="thumbnail col-sm-4">
+            <div class="thumb">
+                <img ng-src='{{hero.url}}' />
+            </div>
+        </div>
+    </div>
+</div>

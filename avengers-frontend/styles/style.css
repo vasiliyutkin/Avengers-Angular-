@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Vollkorn);
+.jumbotron {
+    background: #fff !important;
+}
+
+span.error {
+    color: crimson;
+    font-weight: bold;
+}
+
+.thumbnail-team {
+    width: 350px !important;
+    height: 570px !important;
+    overflow-y: hidden;
+}
+
+.thumbnail-team img {
+    width: 100% !important;
+    height: 450px !important;
+}
+
+.thumbnail-favs img {
+    width: 100% !important;
+    height: 400px !important;
+}
+
+.thumbnail-favs {
+    width: 540px !important;
+    height: 715px !important;
+    overflow-y: hidden;
+}
+
+.ng-enter {
+    transition: .3s ease all;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.ng-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.ng-leave {
+    transition: .3s ease all;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.ng-leave-active {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+i {
+    color: #10aded;
+    font-size: 20px;
+    font-family: 'Vollkorn', serif;
+}
+
+.start .row div a > img {
+    width: 350px;
+    height: 220px;
+}
+
+.thumbnail .thumb img {
+    width: 400px;
+    height: 600px;
+}
+
+.nav {
+    background: #fff !important;
+}
+
+* {
+    font-family: 'Vollkorn', serif;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all .7s ease;
+}
+
+body,
+html {
+    display: flex;
+    flex-flow: column wrap;
+    background: url('../assets/stardust/stardust.png');
+}
+
+input,
+button {
+    font-weight: bold !important;
+    text-transform: uppercase;
+}
+
+table {
+    background: #fff !important;
+    color: #2a2025 !important;
+}
+
+th {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+td,
+th {
+    text-align: center !important;
+    padding: 6px !important;
+    margin: 10px !important;
+    font-weight: 700 !important;
+}
+
+table tr td:nth-child(6) {
+    width: 400px;
+}
+
+table tr td:nth-child(1):hover {
+    color: red;
+}
